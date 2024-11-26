@@ -1,18 +1,21 @@
 {
   "name": "vr-test-backend",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "start": "node --import=tsx ./src/main.ts",
-    "start:watch": "node --import=tsx --watch ./src/main.ts"
+    "start": "node --import=tsx ./src/server.ts",
+    "start:watch": "node --import=tsx  --watch ./src/server.ts",
+    "build": "npx tsc",
+    "prod": "node ./dist/server.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "express": "^4.21.1",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "tsx": "^4.19.2"
   }
 }
